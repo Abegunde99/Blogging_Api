@@ -1,5 +1,6 @@
 const express = require('express');
 require('dotenv').config();
+const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const User = require('./src/models/UserModel');
 const userRouter = require('./src/routes/userRoutes');
@@ -13,6 +14,7 @@ const app = express()
 
 //middleWares
 app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static('public'));
 app.use(cookieParser());
