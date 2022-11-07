@@ -69,7 +69,7 @@ yarn run start
 ```
 
 # Base Url
-
+https://mybloggingapi.herokuapp.com/
 
 ## Requirements
 1. User should be able to register 
