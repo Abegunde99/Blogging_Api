@@ -66,7 +66,7 @@ describe('Testing all the post routes', () => {
 
         expect(response.status).toBe(201);
         expect(response.body).toHaveProperty('post');
-    });
+    },10000);
 
     //testing the get all posts route
     it('should get all posts', async () => {
@@ -76,7 +76,7 @@ describe('Testing all the post routes', () => {
         
         expect(response.status).toBe(200);
         expect(response.body).toHaveProperty('data');
-    });
+    }, 10000);
 
     //testing the get a post route
     it('should get a post', async () => {
@@ -92,7 +92,7 @@ describe('Testing all the post routes', () => {
         expect(response.body.post).toHaveProperty('description');
         expect(response.body.post).toHaveProperty('body');
         expect(response.body.post).toHaveProperty('state');
-    });
+    }, 10000);
 
     //testing the update post route
     it('should update a post', async () => {
@@ -105,7 +105,7 @@ describe('Testing all the post routes', () => {
         });
         expect(response.status).toBe(200);
         expect(response.body).toHaveProperty('newPost');
-    });
+    }, 10000);
         
    
     //testing the change state route
@@ -117,7 +117,7 @@ describe('Testing all the post routes', () => {
         expect(response.status).toBe(200);
         expect(response.body).toHaveProperty('post');
 
-    });
+    },10000);
 
      //testing the delete post route
      it('should delete a post', async () => {
@@ -126,5 +126,5 @@ describe('Testing all the post routes', () => {
         console.log(response.body)
         expect(response.status).toBe(200);
         expect(response.body).toHaveProperty('message');
-    });
+    },10000);
 });

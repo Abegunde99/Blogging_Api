@@ -40,7 +40,7 @@ describe('Testing all the user routes', () => {
         expect(response.body.user).toHaveProperty('first_name');
         expect(response.body.user).toHaveProperty('last_name');
         expect(response.body.user).toHaveProperty('email');
-    });
+    }, 10000);
 
     //testing the login route
     it('should login a user', async () => {
@@ -53,7 +53,7 @@ describe('Testing all the user routes', () => {
         expect(response.status).toBe(200);
         expect(response.body).toHaveProperty('user');
         expect(response.body).toHaveProperty('message');
-    });
+    }, 10000);
 
 
     //testing the logout route
@@ -67,7 +67,7 @@ describe('Testing all the user routes', () => {
         const response = await request(app).get('/api/v1/users/logout').set('Cookie', loginUser.headers['set-cookie']);
         expect(response.status).toBe(200);
         expect(response.body).toHaveProperty('message');
-    });
+    }, 10000);
 
 
     //testing the delete user route
@@ -77,6 +77,6 @@ describe('Testing all the user routes', () => {
         const response = await request(app).delete(`/api/v1/users/delete/${user._id}`);
         expect(response.status).toBe(200); 
         expect(response.body).toHaveProperty('message');
-    })
+    }, 10000);
 
 });
