@@ -5,7 +5,7 @@
 - Description
 - Instruction
 - Requirement
-- Poject tree
+- Project tree
 
 # Description
 
@@ -19,7 +19,7 @@ NodeJS that includes npm
 
 ### `Download the project to Your Pc`
 
-having the project in ur local environment
+having the project in your local environment
 
 ```
 
@@ -57,7 +57,7 @@ requires for this server to run successfully
 
 ### `Start the Server`
 
-Runninh the server on your local environment
+Running the server on your local environment
 
 ```
 npm run start
