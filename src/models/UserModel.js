@@ -50,9 +50,9 @@ userSchema.statics.login = async function(email, password) {
         if (auth) {
             return user
         }
-        throw new ErrorResponse('invalid password', 401)
+        throw new ErrorResponse('invalid credentials', 401)
     }
-    throw new ErrorResponse('invalid email', 401);
+    throw new ErrorResponse('invalid credentials', 401);
 }
 
 module.exports = mongoose.model('User', userSchema);
